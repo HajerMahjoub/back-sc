@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import scrapperProductCtrl from './controllers/scrapperProductCtrl';
 import getAllProductsCtrl from './controllers/getAllProductsCtrl'
 import getProductCtrl from './controllers/getProductCtrl'
@@ -7,7 +9,9 @@ import * as bodyParser from 'body-parser';
 import * as mongoose from 'mongoose';
 import * as cors from 'cors';
 
-mongoose.connect('mongodb://localhost:27017/scrapper', {
+const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/scrapper'
+
+mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
