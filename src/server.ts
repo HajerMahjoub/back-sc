@@ -4,10 +4,10 @@ import scrapperProductCtrl from './controllers/scrapperProductCtrl';
 import getAllProductsCtrl from './controllers/getAllProductsCtrl'
 import getProductCtrl from './controllers/getProductCtrl'
 
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
-import * as mongoose from 'mongoose';
-import * as cors from 'cors';
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
 const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/scrapper'
 

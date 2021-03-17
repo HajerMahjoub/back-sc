@@ -1,6 +1,6 @@
-import axios from "axios"
 import * as cheerio from "cheerio"
 import ProductModel from "../models/Product";
+const axios = require("axios")
 
 export default async function scrapper(origin, url) {
     console.log('scrapping: ', url)
