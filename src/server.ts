@@ -11,6 +11,8 @@ const cors = require('cors');
 
 const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/scrapper'
 
+console.log({ mongoURL })
+
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
